@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NV Atlas — Corpus Explorer</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>NV Atlas <span class="sub">· Corpus Explorer</span></h1>
+    <p class="tagline">A 500-entry test sample of the NV Atlas corpus — English nominals to Chinese verbs.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="toolbar card">
+    <label class="search-label" for="q">Search English / Chinese / fields</label>
+    <input id="q" type="search" placeholder="e.g. question, 问, destruction…" autocomplete="off">
+    <div class="meta">
+      <button id="resetBtn" type="button">Clear</button>
+      <span id="count" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section id="results" class="cards" aria-live="polite"><!-- entries --></section>
+  <section id="empty" class="empty hidden" role="status">
+    <p>No matching entries found.</p>
+    <p class="hint">Try a different search term, or clear the search to see all entries.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><a href="https://nvatlas.tra.cuhk.edu.hk/" target="_blank" rel="noopener">NV Atlas project</a> — Nominals to Verbs · test corpus sample of 500 entries.</p>
+  <p class="small">Static demo. Data is loaded locally from <code>assets/data.js</code> and never sent to any external service.</p>
+</footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
